@@ -1,0 +1,336 @@
+:root {
+    --text-color: white;
+    --background-color: #53330f;
+    /* --background-color: black; */
+    --header-text-color: #cb7c43;
+    --header-background-color: #53330f;
+    --selection-text-color: white;
+    --selection-background-color: black;
+    --icon-color: black;
+    --icon-border-color: red;
+    --icon-inside-color: white;
+    --icon-background-color: gray;
+    --header-icon-color: white;
+    --header-icon-border-color: red;
+    /* --header-icon-inside-color: white ; */
+    --shop-btn-color: white;
+    --shop-btn-background: #53330f;
+    --shop-btn-shadow-color: white;
+    --hero-text-color: white;
+    --hero-background-color: #53330f96;
+    --product-text-color: white;
+    --main-section-bg-color: #95743e;
+    --product-bg-color: #704601;
+    --category-bg-color: #95743e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.help {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+    text-align: center;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    background-color: var(--icon-background-color);
+    border-radius: 60px;
+    padding: 5px;
+    height:90px;
+    width: 90px;
+    color: var(--text-color);
+    font-size: 15px;
+    font-weight: 700;
+    box-shadow: 0 0 10px black;
+}
+
+.help path,
+.help circle {
+    stroke: var(--icon-color);
+    fill: var(--icon-inside-color)
+}
+
+
+nav .logo path,
+nav .search path {
+    stroke: var(--header-icon-color);
+    fill: var(--header-icon-inside-color);
+}
+
+#help-icon {
+    border-radius: 60px;
+}
+
+.help:hover, .category-item button:hover, #search:hover, #news-sub-btn:hover, .product-item button:hover {
+    cursor: pointer;
+}
+
+::selection {
+    background-color: var(--selection-background-color);
+    color: var(--selection-text-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+header {
+    height: 90px;
+    background-color: var(--header-background-color);
+    color: var(--header-text-color);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 20px;
+}
+
+nav ul {
+    display: flex;
+    gap: 40px;
+}
+
+ul li {
+    list-style: none;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+    background-image: url(https://w.wallhaven.cc/full/nz/wallhaven-nz9q3y.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.hero-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 50px;
+    color: var(--hero-text-color);
+    backdrop-filter: blur(10px);
+    padding: 20px 10px;
+    border-radius: 5px;
+    line-height: 1.2;
+    background-color: var(--hero-background-color);
+}
+
+.shop-btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    font-size: 23px;
+    margin: 10px;
+    background-color: var(--shop-btn-background);
+    box-shadow: 0 0 140px var(--shop-btn-shadow-color);
+}
+
+.shop-btn a {
+    color: var(--shop-btn-color);
+}
+
+h2 {
+    margin: 0 10vw;
+    padding: 40px 0;
+    font-size: 30px;
+}
+
+.category-grid {
+    display: grid;
+    margin: 0 10vw;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.category-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    border-radius: 160px;
+    width: 400px;
+}
+
+.category-item button {
+    padding: 20px;
+    border-radius: 28px;
+    background: rgba(0, 0, 0, 0.0);
+    border: none;
+    font-size: 30px;
+    color: var(--text-color);
+}
+
+.c-item1 {
+    background-image: url(https://w.wallhaven.cc/full/6o/wallhaven-6odzzl.jpg);
+    background-position: 0% -122%;
+    background-size: 238%;
+}
+
+.c-item1-filter {
+    backdrop-filter: blur(.9px) contrast(75%) brightness(110%);
+}
+.c-item1-filter, .c-item2-filter, .c-item3-filter {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    border-radius: 160px;
+    align-items: center;
+    justify-content: center;    
+}
+
+.c-item2-filter, .c-item3-filter{
+    backdrop-filter: blur(1px) brightness(80%);
+}
+
+.c-item2 {
+    background-image: url(https://w.wallhaven.cc/full/nz/wallhaven-nz9q3y.jpg);
+    background-position: 14%;
+    background-size: 541%;
+}
+
+.c-item3 {
+    background-image: url(https://w.wallhaven.cc/full/nz/wallhaven-nz9q3y.jpg);
+    background-position: 70%;
+    background-size: 400%;
+}
+
+.product-grid {
+    display: grid;
+    margin: 0 10vw;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.product-item {
+    background: url(https://w.wallhaven.cc/full/nz/wallhaven-nz9q3y.jpg);
+    height: 300px;
+    width: 300px;
+    border-radius: 167px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-item button{
+    font-size: 35px;
+    background: transparent;
+    border: none;
+    color: var(--product-text-color);
+}
+
+footer {
+    padding-bottom: 20px;
+    display: grid;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+}
+
+.footer-text {
+    margin: 0 20vw;
+}
+
+.news-text {
+    padding-top: 20px;
+}
+
+.news-text h3 {
+    font-size: 25px;
+}
+
+input[type="email"] {
+    height: 38px;
+    border-radius: 6px;
+    margin: 0 14px;
+    text-align: center;
+    font-size: 20px;
+    border: none;
+}
+
+#news-sub-btn {
+    padding: 11px 17px;
+    border-radius: 25px;
+    border: none;
+    color: var(--text-color);
+    background-color: brown;
+    font-size: 15px;
+}
+
+.email-label {
+    font-size: 25px;
+}
+
+.p-item1{
+    background-position:10% 10% ;
+    background-size:575% ;
+}
+.p-item2{
+    background-position: 92% 98%;
+    background-size: 850%;
+}
+.p-item3{
+    background-position: 69% 93%;
+    background-size: 1000%;
+}
+.p-item4{
+    background-position: 52% 45%;
+    background-size: 1000%;
+}
+.p-item5{
+    background-position: 17% 50%;
+    background-size: 937%;
+}
+.p-item6{
+    background-position: 1% 43%;
+    background-size: 1000%;
+}
+.p-item7{
+    background-position: -10% 30%;
+    background-size: 1000%;
+}
+.p-item8{
+    background-position: 56% 77%;
+    background-size: 1000%;
+}
+main{
+    background-color: var(--main-section-bg-color);
+}
+
+.title{
+    color:var(--text-color);
+    font-size: 50px;
+    font-weight: 700px;
+    padding: 100px;
+    text-align: center;
+}
+
+#category{
+    background-color: var(--category-bg-color);
+    padding-bottom: 80px;
+}
+
+#product{
+    background-color: var(--product-bg-color);
+    padding-bottom: 60px;    
+}
